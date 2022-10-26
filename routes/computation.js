@@ -3,20 +3,20 @@ var router = express.Router();
 
 
 router.get('/',function(req,res,next) {
-    var a = Math.random();
-    var x;
-    x = req.query.x;
-    if(x==undefined)
+    var x = Math.random();
+    var y;
+    y = req.query.y;
+    if(y==undefined)
     {
-        x=a;
+        y=x;
     }
 
-  res.render('computation', { title: `f(${x}) is ${Math.round(x)}` });
+  res.render('computation', { title: `f(${y}) is ${Math.round(y)}` });
 })
 
 /* GET home page. */
 router.get(`/`,function(req,res,next){
-res.render('computation', { title: `f(${x}) is ${Math.round(x)}` });
+res.render('computation', { title: `f(${y}) is ${Math.round(y)}` });
 res.end();
 });
 
