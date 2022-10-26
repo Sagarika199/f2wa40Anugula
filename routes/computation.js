@@ -11,12 +11,12 @@ router.get('/',function(req,res,next) {
         x=a;
     }
 
-  res.render('computation', { title: `f(${x}) is ${Math.fround(x)}` });
+  res.render('computation', { title: `f(${x}) is ${Math.round(x)}` });
 })
 
 /* GET home page. */
 router.get(`/`,function(req,res,next){
-res.render('computation', { title: `f(${x}) is ${Math.fround(x)}` });
+res.render('computation', { title: `f(${x}) is ${Math.round(x)}` });
 res.end();
 });
 
